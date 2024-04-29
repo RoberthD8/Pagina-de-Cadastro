@@ -1,7 +1,9 @@
-/** @jsxImportSource react */
-/** @jsxFrag Fragment */
+
 /** @jsxRuntime automatic */
 /** @client */
+
+//Isso é para rodar do lado Client e não do serv
+'use client'
 
 import type { NextPage } from 'next';
 import { useState } from 'react';
@@ -9,6 +11,7 @@ import { useState } from 'react';
 const Home: NextPage = () => {
   const [formData, setFormData] = useState({
     nome: '',
+    email: '',
     email: '',
     senha: ''
   });
@@ -24,7 +27,7 @@ const Home: NextPage = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
-    // Aqui você pode integrar com uma API para processar os dados do formulário
+    
   };
 
   return (
