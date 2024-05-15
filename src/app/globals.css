@@ -13,23 +13,74 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: ) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+  
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
-      transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+
+    text-align: center;
 }
+h1{
+  text-align:center;
+  margin-bottom: 2px;
+  font-size: 200%;
+}
+
+/* Estilos para rótulos e campos de entrada */
+label {
+  display: inline-flexbox;
+  margin-bottom: 10px;
+}
+input[type="text"] {
+  width: 15%;
+  padding: 1px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+input[type="email"] {
+  width: 15%;
+  padding: 1px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+input[type="password"] {
+  width: 15%;
+  padding: 1px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+
+/* Estilos para o botão de envio */
+input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
 
 @layer utilities {
   .text-balance {
